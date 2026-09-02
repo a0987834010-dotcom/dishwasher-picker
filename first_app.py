@@ -14,7 +14,7 @@ names_input = st.text_input("請輸入今天吃飯的人員（請用逗號隔開
 # 2. 抽籤按鈕 logic
 if st.button("🎲 開始抽籤！", type="primary"):
     # 處理輸入字串，轉成 List 並去除多餘空白
-    name_list = [name.strip() for name in names_input.split(",") if name.strip()]
+    name_list = [name.strip() for name in names_input.split(",","，") if name.strip()]
     
     if name_list:
         # 隨機抽取一人
